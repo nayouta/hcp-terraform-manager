@@ -1,5 +1,5 @@
 output "workspace_id" {
-  value       = tfe_workspace.this.id
+  value       = tfe_workspace.workspace_manager.id
   description = "モジュールで作成したワークスペースのID"
 }
 

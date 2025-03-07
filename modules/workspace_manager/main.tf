@@ -1,4 +1,4 @@
-resource "tfe_workspace" "this" {
+resource "tfe_workspace" "workspace_manager" {
   name         = var.workspace_name
   organization = var.organization
   auto_apply   = false
