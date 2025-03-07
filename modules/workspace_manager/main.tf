@@ -2,6 +2,7 @@ resource "tfe_workspace" "workspace_manager" {
   name         = var.workspace_name
   organization = var.organization
   auto_apply   = false
+  force_delete = true
 
   vcs_repo {
     identifier                 = var.vcs_repo_identifier
