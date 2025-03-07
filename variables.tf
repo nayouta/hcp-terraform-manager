@@ -23,3 +23,8 @@ variable "github_app_installation_id" {
   description = "GitHub Appを利用する場合のインストールID"
   type        = string
 }
+
+variable "workspace_name" {
+  description = "作成するワークスペースの名前"
+  type        = string
+}
