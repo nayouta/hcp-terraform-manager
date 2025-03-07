@@ -1,5 +1,6 @@
 resource "tfe_workspace" "workspace_manager" {
   name         = var.workspace_name
+  description  = var.workspace_description
   organization = var.organization
   auto_apply   = false
   force_delete = true
