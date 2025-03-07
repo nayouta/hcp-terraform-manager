@@ -3,6 +3,11 @@ variable "workspace_name" {
   type        = string
 }
 
+variable "workspace_description" {
+  description = "作成するワークスペースの説明"
+  type        = string
+}
+
 variable "organization" {
   description = "TFE上の組織名"
   type        = string

@@ -8,6 +8,11 @@ variable "organization_name" {
   type        = string
 }
 
+variable "workspace_description" {
+  description = "作成するワークスペースの説明"
+  type        = string
+}
+
 variable "vcs_repo_identifier" {
   description = "GitHubリポジトリの識別子（例: github_org/terraform-code-repo）"
   type        = string
