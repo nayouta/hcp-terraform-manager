@@ -1,8 +1,3 @@
-provider "tfe" {
-  hostname = "app.terraform.io" # HCP Terraformのエンドポイント
-  token    = var.tfe_token
-}
-
 module "workspace_manager" {
   source                     = "./modules/workspace_manager"
   workspace_name             = "hcp-terraform-manager"
