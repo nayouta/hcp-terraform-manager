@@ -33,3 +33,15 @@ variable "workspace_name" {
   description = "作成するワークスペースの名前"
   type        = string
 }
+
+variable "auto_apply" {
+  description = "ワークスペースの変更を自動的に適用するかどうか"
+  type        = bool
+  default     = false
+}
+
+variable "force_delete" {
+  description = "ワークスペース削除時に関連リソースも削除するかどうか"
+  type        = bool
+  default     = false
+}
