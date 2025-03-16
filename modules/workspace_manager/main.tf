@@ -6,8 +6,8 @@ resource "tfe_workspace" "workspace_manager" {
   force_delete = true
 
   vcs_repo {
-    identifier                 = var.vcs_repo_identifier
-    branch                     = var.vcs_repo_branch
-    github_app_installation_id = var.github_app_installation_id
+    identifier     = var.vcs_repo_identifier
+    branch         = var.vcs_repo_branch
+    oauth_token_id = var.oauth_token_id
   }
 }

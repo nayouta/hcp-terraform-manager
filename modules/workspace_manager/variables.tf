@@ -24,8 +24,8 @@ variable "vcs_repo_branch" {
   default     = "master"
 }
 
-variable "github_app_installation_id" {
-  description = "Installation ID when using GitHub App"
+variable "oauth_token_id" {
+  description = "OAuth token ID"
   type        = string
 }
 
