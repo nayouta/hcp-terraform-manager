@@ -9,7 +9,6 @@ terraform {
 }
 
 provider "tfe" {
-  hostname = "app.terraform.io" # HCP Terraformのエンドポイント
+  hostname = "app.terraform.io" # HCP Terraform Endpoint
   token    = var.tfe_token
 }
-

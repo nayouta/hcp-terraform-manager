@@ -6,20 +6,20 @@ on:
 
 jobs:
   terraform-format:
-    name: Terraform フォーマットチェック
+    name: Terraform Format Check
     if: github.base_ref == github.event.repository.default_branch
     runs-on: ubuntu-latest
 
     steps:
-      - name: リポジトリをチェックアウト
+      - name: Checkout Repository
         uses: actions/checkout@v4
 
-      - name: Terraform をセットアップ
+      - name: Setup Terraform
         uses: hashicorp/setup-terraform@v2
         with:
           terraform_version: latest
 
-      - name: Terraform フォーマットチェック
+      - name: Terraform Format Check
         id: fmt
         run: |
           UNFORMATTED_FILES=$(terraform fmt -check -recursive -diff 2>&1 | grep -E '.*\.tf$' || true)
@@ -28,11 +28,11 @@ jobs:
             echo "formatted=true" >> "$GITHUB_ENV"
           else
             echo "formatted=false" >> "$GITHUB_ENV"
-            echo "❌ 以下の Terraform ファイルがフォーマットされていません:"
+            echo "❌ The following Terraform files are not formatted:"
             echo "$UNFORMATTED_FILES"
             exit 1
           fi
 
-      - name: フォーマットステータスを出力
+      - name: Output Format Status
         run: |
           echo "Terraform Format Status: ${{ env.formatted }}"

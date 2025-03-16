@@ -1,47 +1,47 @@
 variable "tfe_token" {
-  description = "HCP TerraformのAPIトークン"
+  description = "HCP Terraform API token"
   type        = string
 }
 
 variable "organization_name" {
-  description = "HCP Terraform上の組織名"
+  description = "Organization name on HCP Terraform"
   type        = string
 }
 
 variable "workspace_description" {
-  description = "作成するワークスペースの説明"
+  description = "Description of the workspace to be created"
   type        = string
 }
 
 variable "vcs_repo_identifier" {
-  description = "GitHubリポジトリの識別子（例: github_org/terraform-code-repo）"
+  description = "GitHub repository identifier (e.g., github_org/terraform-code-repo)"
   type        = string
 }
 
 variable "vcs_repo_branch" {
-  description = "連携対象のブランチ"
+  description = "Branch to be integrated"
   type        = string
   default     = "master"
 }
 
 variable "github_app_installation_id" {
-  description = "GitHub Appを利用する場合のインストールID"
+  description = "Installation ID when using GitHub App"
   type        = string
 }
 
 variable "workspace_name" {
-  description = "作成するワークスペースの名前"
+  description = "Name of the workspace to be created"
   type        = string
 }
 
 variable "auto_apply" {
-  description = "ワークスペースの変更を自動的に適用するかどうか"
+  description = "Whether to automatically apply workspace changes"
   type        = bool
   default     = false
 }
 
 variable "force_delete" {
-  description = "ワークスペース削除時に関連リソースも削除するかどうか"
+  description = "Whether to delete related resources when deleting the workspace"
   type        = bool
   default     = false
 }

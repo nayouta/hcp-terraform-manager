@@ -1,42 +1,42 @@
 variable "workspace_name" {
-  description = "作成するワークスペースの名前"
+  description = "Name of the workspace to be created"
   type        = string
 }
 
 variable "workspace_description" {
-  description = "作成するワークスペースの説明"
+  description = "Description of the workspace to be created"
   type        = string
 }
 
 variable "organization" {
-  description = "TFE上の組織名"
+  description = "Organization name on HCP Terraform"
   type        = string
 }
 
 variable "vcs_repo_identifier" {
-  description = "GitHubリポジトリの識別子"
+  description = "GitHub repository identifier"
   type        = string
 }
 
 variable "vcs_repo_branch" {
-  description = "GitHubリポジトリのブランチ"
+  description = "GitHub repository branch"
   type        = string
   default     = "master"
 }
 
 variable "github_app_installation_id" {
-  description = "GitHub Appを利用する場合のインストールID"
+  description = "Installation ID when using GitHub App"
   type        = string
 }
 
 variable "auto_apply" {
-  description = "ワークスペースの変更を自動的に適用するかどうか"
+  description = "Whether to automatically apply workspace changes"
   type        = bool
   default     = false
 }
 
 variable "force_delete" {
-  description = "ワークスペース削除時に関連リソースも削除するかどうか"
+  description = "Whether to delete related resources when deleting the workspace"
   type        = bool
   default     = false
 }
