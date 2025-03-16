@@ -28,3 +28,15 @@ variable "github_app_installation_id" {
   description = "GitHub Appを利用する場合のインストールID"
   type        = string
 }
+
+variable "auto_apply" {
+  description = "ワークスペースの変更を自動的に適用するかどうか"
+  type        = bool
+  default     = false
+}
+
+variable "force_delete" {
+  description = "ワークスペース削除時に関連リソースも削除するかどうか"
+  type        = bool
+  default     = false
+}
